@@ -1,5 +1,4 @@
 const express = require('express');
-const functions = require('firebase-functions');
 const app = express();
 const morgan = require('morgan');
 
@@ -29,6 +28,3 @@ if (process.env.NODE_ENV !== 'production') {
     console.log(`Server is running on port ${port}`);
   });
 }
-
-
-exports.app = functions.https.onRequest(app);
